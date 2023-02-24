@@ -1,0 +1,31 @@
+{
+  "name": "custom-teamsite-documentation",
+  "version": "1.0.0",
+  "description": "A simple site for navigating through Teamsite documentation, examples and references",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/errepar_sa1/sandbox/developers/santiagopintus/custom-teamsite-docs.git"
+  },
+  "keywords": [
+    "Teamsite",
+    "Component",
+    "Template",
+    "DCR",
+    "HTML",
+    "CSS",
+    "JavaScript"
+  ],
+  "author": "Santiago Pintus",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/errepar_sa1/sandbox/developers/santiagopintus/custom-teamsite-docs/issues"
+  },
+  "homepage": "https://gitlab.com/errepar_sa1/sandbox/developers/santiagopintus/custom-teamsite-docs#readme",
+  "dependencies": {
+    "bootstrap": "^5.2.3"
+  }
+}
