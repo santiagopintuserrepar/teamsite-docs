@@ -4,27 +4,165 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Bootstrap -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- FONT AWESOME -->
+    <script
+      src="https://kit.fontawesome.com/2d430cba2e.js"
+      crossorigin="anonymous"
+    ></script>
+
     <!-- Styles -->
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/style.min.css" />
     <title>Inicio - Documentación de Teamsite</title>
   </head>
   <body>
-    <h1 class="main-title">Documentación de Teamsite</h1>
-    <nav>
-      <h3>Content Center Professional</h3>
-      <ul>
-        <li><a href="pages/ccpro/componentes.html">Componentes</a></li>
-        <li><a href="pages/ccpro/templates.html">Templates (xsl)</a></li>
-        <li><a href="pages/ccpro/assets.html">Assets</a></li>
-        <li><a href="pages/ccpro/dcrs.html">DCRs</a></li>
-      </ul>
-      <h3>Experience Studio</h3>
-      <ul>
-        <li><a href="pages/estudio/pages.html">Pages</a></li>
-        <li><a href="pages/estudio/templates.html">Templates</a></li>
-        <li><a href="pages/estudio/dcrs.html">Assets</a></li>
-      </ul>
-    </nav>
-    <script src="js/main.js"></script>
+    <!-- HEADER -->
+    <header>
+      <nav class="navbar navbar-expand-lg p-3 mb-2 shadow-sm">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Documentación de Teamsite</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Content Center Professional
+                </a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a class="dropdown-item" href="pages/ccpro/componentes.html"
+                      >Componentes</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="pages/ccpro/templates.html"
+                      >Templates (xsl)</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="pages/ccpro/assets.html"
+                      >Assets</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="pages/ccpro/dcrs.html"
+                      >DCRs</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Experience Studio
+                </a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a class="dropdown-item" href="pages/estudio/pages.html"
+                      >Pages</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="pages/estudio/templates.html"
+                      >Templates</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="pages/estudio/dcrs.html"
+                      >Assets</a
+                    >
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <ul class="navbar-nav">
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Ir a
+                </a>
+                <ul class="dropdown-menu dropdown-menu-end">
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      target="_blank"
+                      href="https://ui.public.awsalphadevqa.com/iw-cc/command/iw.ccpro.switch_ui"
+                      >CCPro DEVQA</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      target="_blank"
+                      href="https://ui.public.awsalphadevqa.com/estudio/#/project/Errepar/sites/errepar/pages"
+                      >EStudio DEVQA</a
+                    >
+                  </li>
+                  <li><hr /></li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      target="_blank"
+                      href="https://ui.public.awsalphaprod.com/iw-cc/command/iw.ccpro.filesys"
+                      >CCPro PROD</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      target="_blank"
+                      href="https://ui.public.awsalphaprod.com/estudio/#/project/Errepar/sites/errepar/pages"
+                      >EStudio PROD</a
+                    >
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- HEADER FINISHES -->
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/js/solid.min.js"
+      integrity="sha512-Cw3lrAMFnu1XhNZB73mT27VptT/2szZ1sn2MLnPq+ATkY0qu16il+xEQdo4wDZCAVnO8QZ12547AfBZhO9M9cw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="js/index.js" type="module"></script>
   </body>
 </html>

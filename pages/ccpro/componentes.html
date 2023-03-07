@@ -4,29 +4,234 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Bootstrap -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- FONT AWESOME -->
+    <script
+      src="https://kit.fontawesome.com/2d430cba2e.js"
+      crossorigin="anonymous"
+    ></script>
+
     <!-- Styles -->
-    <link rel="stylesheet" href="../../css/style.css" />
-    <title>Inicio - Documentación de Teamsite</title>
+    <link rel="stylesheet" href="../../css/style.min.css" />
+
+    <!-- Title -->
+    <title>Componentes - Documentación de Teamsite</title>
   </head>
   <body>
+    <!-- HEADER -->
     <header>
-      <h1 class="main-title">Documentación de Teamsite</h1>
-      <nav>
-        <h3>Content Center Professional</h3>
-        <ul>
-          <li><a href="pages/ccpro/componentes.html">Componentes</a></li>
-          <li><a href="pages/ccpro/templates.html">Templates (xsl)</a></li>
-          <li><a href="pages/ccpro/assets.html">Assets</a></li>
-          <li><a href="pages/ccpro/dcrs.html">DCRs</a></li>
-        </ul>
-        <h3>Experience Studio</h3>
-        <ul>
-          <li><a href="pages/estudio/pages.html">Pages</a></li>
-          <li><a href="pages/estudio/templates.html">Templates</a></li>
-          <li><a href="pages/estudio/dcrs.html">Assets</a></li>
-        </ul>
+      <nav class="navbar navbar-expand-lg p-3 mb-2 shadow-sm">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="../../">Documentación de Teamsite</a>
+        </div>
       </nav>
     </header>
-    <script src="../../js/main.js"></script>
+    <!-- HEADER FINISHES -->
+
+    <div class="row">
+      <div class="col-3">
+        <nav
+          id="componentsNavigation"
+          class="h-100 flex-column align-items-stretch pe-4 border-end"
+        >
+          <nav class="nav nav-pills flex-column">
+            <a class="nav-link" href="#ubicacion">Ubicación</a>
+            <a class="nav-link" href="#crearComponente">Crear un componente</a>
+          </nav>
+        </nav>
+      </div>
+
+      <!-- MAIN CONTENT -->
+      <main
+        class="col-9 page-content"
+        data-bs-spy="scroll"
+        data-bs-target="#componentsNavigation"
+        data-bs-smooth-scroll="true"
+        class="scrollspy-example-2"
+        tabindex="0"
+      >
+        <h1 class="main-title"><i class="fa-solid fa-cubes"></i>Componentes</h1>
+
+        <!-- Ubicación -->
+        <section class="main-section" id="ubicacion">
+          <h2>Ubicación</h2>
+          <p>Los componentes se localizan en la siguiente ruta de CCPRO:</p>
+          <span id="componentsUrl"
+            >//iwserver/iwadmin/main/livesite/component/WORKAREA/shared/Custom</span
+          >
+          <button
+            class="btn btn-sm btn-secondary copy-this"
+            data-id="componentsUrl"
+          >
+            Copiar
+          </button>
+        </section>
+
+        <section class="main-section" id="crearComponente">
+          <!-- CREAR UN COMPONENTE -->
+          <h2>Crear un componente</h2>
+          <ol>
+            <li>Ir a CCPro</li>
+            <li>Dirigirse a la ruta de los componentes</li>
+            <li>Seleccionar la carpeta donde se ubicará el componente</li>
+            <li>
+              <p>Con la carpeta seleccionada dirigirse a "Archivo"</p>
+              <img
+                width="250px"
+                src="../../assets/images/crear-componente-1.png"
+                alt="Abrir archivo"
+              />
+            </li>
+            <li>
+              <p>Seleccionar "Nuevo componente"</p>
+              <img
+                width="250px"
+                src="../../assets/images/crear-componente-2.png"
+                alt="Nuevo componente"
+              />
+            </li>
+            <li>
+              <p>
+                Se abrirá una ventana popup. Seleccionar "XSLT 1.0" y
+                "Siguiente"
+              </p>
+              <img
+                width="250px"
+                src="../../assets/images/crear-componente-3.png"
+                alt="Opciones del componente"
+              />
+            </li>
+            <li>
+              <p>
+                Llenar el formulario escribiendo el nombre, descripción y otros
+                datos del componente
+              </p>
+            </li>
+            <li id="xsl">
+              Definir el HTML del componente. Se incluye el HTML en la sección
+              <b>"Aspecto"</b> del componente. Para hacerlo hay dos
+              alternativas.
+              <ul>
+                <li>
+                  <p>Recomendada:</p>
+                  <p>
+                    Idealmente importar un template XSL que contenga el HTML del
+                    componente
+                    <a href="templates.html">Ver sección Templates (.xsl)</a>:
+                  </p>
+                  <p>
+                    Este es un ejemplo real del componente <b>articleListing</b>
+                  </p>
+                  <pre>
+  &lt;!DOCTYPE html-entities SYSTEM
+  "http://www.interwoven.com/livesite/xsl/xsl-html.dtd"&gt;
+  &lt;xsl:stylesheet version="1.0"
+  xmlns:xsl="http://www.w3.org/1999/XSL/Transform" &gt;
+  &lt;!-- Skin: XSL_NAME --&gt;
+    &lt;xsl:include
+  href="http://www.interwoven.com/livesite/xsl/HTMLTemplates.xsl"
+  /&gt;
+    &lt;xsl:include
+  href="http://www.interwoven.com/livesite/xsl/StringTemplates.xsl"
+  /&gt;
+  <mark>&lt;xsl:include href="http://www.interwoven.com/custom/iwov-resources/xsl/Errepar-Home/articlelisting.xsl"/&gt;</mark>
+  
+    &lt;xsl:template match="/"&gt;
+      <mark>&lt;xsl:call-template name="articlelisting"&gt;&lt;/xsl:call-template&gt;</mark>
+    &lt;/xsl:template&gt;
+  &lt;/xsl:stylesheet&gt;
+                  </pre>
+                  <p>
+                    El valor del atributo <b>name debe ser idéntico</b> al
+                    atributo
+                    <b>name</b>
+                    definido en el template .xsl
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <b>Alternativamente</b> insertar el HTML del componente en
+                    la sección "Aspecto" directamente dentro del tag
+                    <code
+                      >&lt;xsl:template match="/"&gt;&lt;/xsl:template&gt;</code
+                    >
+                  </p>
+                  <img
+                    width="250px"
+                    src="../../assets/images/crear-componente-4.png"
+                    alt="Agregar código HTML"
+                  />
+                  <p>
+                    Esta opción <b>NO es la recomendada</b> ya que dificulta el
+                    mantenimiento del componente.
+                  </p>
+                  <p>
+                    Desarrollar el componente de esta manera implica que al
+                    editar el componente, se requiera una re-deploy de todas las
+                    páginas y templates de Experience Studio que usen este
+                    componente.
+                  </p>
+                </li>
+              </ul>
+            </li>
+            <li id="DCR">
+              <p>
+                Finalmente se define el XML del componente o los DCR "Data
+                Change Request" del componente. Ver
+                <a href="./dcrs.html">DCRs</a> para más información sobre DCRs
+              </p>
+              <p>
+                Dentro de la sección <b>XML del contenido</b> se insertan los
+                tags correspondientes
+              </p>
+              <p>A modo de ejemplo:</p>
+              <pre>
+  <mark>&lt;Data&gt;</mark>
+    &lt;External&gt;
+      &lt;Parameters&gt;
+        <mark>&lt;Datum</mark> ID="D01" Type="SelectSingle" Name="Category"&gt;
+          &lt;Option Selected="true"&gt;
+            &lt;Display&gt;Article&lt;/Display&gt;
+            &lt;Value&gt;marketing/Article&lt;/Value&gt;
+          &lt;/Option&gt;
+        &lt;/Datum&gt;
+        &lt;Datum ID="D02" Type="String" Name="MaxResults"&gt;4&lt;/Datum&gt;
+        &lt;Datum ID="D03" Type="String" Name="priority"/&gt;
+      &lt;/Parameters&gt;
+      &lt;Object Scope="local"&gt;com.errepar.livesite.ArticleListing&lt;/Object&gt;
+      &lt;Method&gt;execute&lt;/Method&gt;
+    &lt;/External&gt;
+  &lt;/Data&gt;
+            </pre
+              >
+            </li>
+            <li>
+              Los estilos y scripts de los componentes se insertan en otra
+              instancia. Ver
+              <a href="../estudio/templates.html"
+                >Templates de Experience Studio</a
+              >.
+            </li>
+          </ol>
+        </section>
+      </main>
+    </div>
+
+    <!-- Button to scroll to top -->
+    <div class="scroll-top">
+      <button id="scrollTopBtn" class="btn btn-primary float-right">
+        <i class="fa fa-chevron-up"></i>
+      </button>
+    </div>
+
+    <!-- Custom Scripts -->
+    <script src="../../js/index.js" type="module"></script>
   </body>
 </html>

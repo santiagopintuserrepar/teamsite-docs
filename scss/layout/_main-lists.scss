@@ -1,0 +1,48 @@
+.main-section {
+  ul,
+  ol {
+    li {
+      padding: 1rem;
+      background-color: $grisLight;
+      margin-bottom: 1.4rem;
+      border-radius: $borderRadius;
+
+      p:last-of-type {
+        margin-bottom: 0;
+      }
+
+      img {
+        width: 550px;
+        max-width: 100%;
+        display: block;
+        box-shadow: $shadow;
+        margin: 5px 0;
+        cursor: pointer;
+
+        &.fullscreen {
+          max-width: 95vw;
+          z-index: 2;
+          @extend .center;
+          position: fixed;
+
+          // &:hover {
+          //   &::after {
+          //     content: "";
+          //     @extend .center;
+          //     height: 50px;
+          //     width: 50px;
+          //     color: tomato;
+          //     z-index: 3;
+          //     background-color: tomato;
+          //   }
+          // }
+        }
+      }
+
+      ul li {
+        padding: 0;
+        margin-bottom: unset;
+      }
+    }
+  }
+}

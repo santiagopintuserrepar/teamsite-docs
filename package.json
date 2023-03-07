@@ -4,7 +4,7 @@
   "description": "A simple site for navigating through Teamsite documentation, examples and references",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "sass --watch scss/custom.scss:css/style.min.css --style=compressed"
   },
   "repository": {
     "type": "git",
@@ -26,6 +26,7 @@
   },
   "homepage": "https://gitlab.com/errepar_sa1/sandbox/developers/santiagopintus/custom-teamsite-docs#readme",
   "dependencies": {
-    "bootstrap": "^5.2.3"
+    "bootstrap": "^5.2.3",
+    "sass": "^1.58.3"
   }
 }

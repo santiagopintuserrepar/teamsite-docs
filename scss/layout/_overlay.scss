@@ -1,0 +1,25 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  background-color: $overlayColor;
+  height: 100vh;
+  z-index: 1;
+  display: none;
+
+  // span.close-btn {
+  //   color: $blanco;
+  //   font-size: 24px;
+  //   position: absolute;
+  //   top: 2rem;
+  //   right: 2rem;
+  //   cursor: pointer;
+  //   background-color: $shadowColor;
+  //   border-radius: 50%;
+  //   padding: 7px 16px;
+  // }
+
+  &.active {
+    display: block;
+  }
+}

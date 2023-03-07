@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Bootstrap -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- FONT AWESOME -->
+    <script
+      src="https://kit.fontawesome.com/2d430cba2e.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="../../css/style.min.css" />
+
+    <!-- Title -->
+    <title>Templates (xsl) - Documentación de Teamsite</title>
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header>
+      <nav class="navbar navbar-expand-lg p-3 mb-2 shadow-sm">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="../../">Documentación de Teamsite</a>
+        </div>
+      </nav>
+    </header>
+    <!-- HEADER FINISHES -->
+
+    <!-- MAIN CONTENT -->
+    <main class="container">
+      <h1 class="main-title"><i class="fa-solid fa-cube"></i>Templates (xsl)</h1>
+
+      <!-- Ubicación -->
+      <section class="main-section" id="ubicacion">
+        <h2>Ubicación</h2>
+        <p>Los templates se localizan en la siguiente ruta de CCPRO:</p>
+        <span
+          ><i id="templatesUrl"
+            >//iwserver/default/main/Errepar/WORKAREA/default/iwov-resources/xsl</i
+          ></span
+        >
+        <button
+          class="btn btn-sm btn-secondary copy-this"
+          data-id="templatesUrl"
+        >
+          Copiar
+        </button>
+      </section>
+
+      <section class="main-section">
+        <!-- Create a template -->
+        <h2>Crear un template .xsl</h2>
+
+        <ol>
+          <li>Crear un archivo .xsl en el entorno local</li>
+          <li>
+            <p>Definir el contenido del .xsl</p>
+            <pre>
+  &lt;xsl:stylesheet version="1.0"
+    xmlns:xsl="http://www.w3.org/1999/XSL/Transform"&gt;
+    &lt;xsl:template name="<mark>templateName</mark>"&gt; &lt;!-- Reemplazar por el nombre del template a incluir en el componente --&gt;
+      &lt;!-- HTML HERE --&gt;
+    &lt;/xsl:template&gt;
+  &lt;/xsl:stylesheet&gt;
+            </pre>
+            <p>Este es el contenido estandard de todos los templates .xsl</p>
+            <p>
+              El valor del atributo name debe ser idéntico al atributo name en
+              el componente
+            </p>
+            <p>
+              Este código HTML se podrá ahora importar por el atributo "name"
+              para ser insertado dentro del componente
+            </p>
+            <p>
+              Ver
+              <a href="./componentes.html#xsl">.xsl dentro del componente</a>
+            </p>
+          </li>
+          <li>
+            <p>
+              Si el componente es editable por el autor, o sea, si hay un DCR:
+            </p>
+            <p>
+              Se accede a la metadata contenida dentro del respectivo
+              <a href="./componentes.html#DCR"
+                >DCR importado en el componente.</a
+              >
+            </p>
+            <p>
+              Para conseguirlo, se utiliza el tag
+              <code>&lt;xsl:value-of ...</code> agregando el atributo
+              <code>select</code> con la ruta al DCR.
+            </p>
+            <p>Por ejemplo:</p>
+            <pre>
+  &lt;h2 class="title-1"&gt;
+    &lt;xsl:value-of select = "/Properties/Data/Datum/DCR/Content/CardTitle" /&gt;
+  &lt;/h2&gt;
+          </pre
+            >
+            <p>
+              De esta manera, el valor de <code>CardTitle</code> se insertará
+              dentro del tag <code>&lt;h2&gt;</code>
+            </p>
+            <p>
+              <strong
+                >Para más información sobre qué tags usar en cada caso acceder a
+                la
+                <a href="https://www.w3schools.com/xml/xsl_intro.asp"
+                  >Documentación de XSLT</a
+                ></strong
+              >
+            </p>
+          </li>
+          <li>
+            Importar el archivo a CCPro en su respectiva carpeta ver
+            <a href="#ubicacion">ubicación</a>
+            <p>Para importar archivos ver <a href="./assets.html">Assets</a></p>
+          </li>
+        </ol>
+      </section>
+    </main>
+
+    <!-- Button to scroll to top -->
+    <div class="scroll-top">
+      <button id="scrollTopBtn" class="btn btn-primary float-right">
+        <i class="fa fa-chevron-up"></i>
+      </button>
+    </div>
+
+    <!-- Custom Scripts -->
+    <script src="../../js/index.js" type="module"></script>
+  </body>
+</html>

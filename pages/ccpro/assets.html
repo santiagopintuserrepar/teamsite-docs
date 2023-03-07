@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Bootstrap -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- FONT AWESOME -->
+    <script
+      src="https://kit.fontawesome.com/2d430cba2e.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="../../css/style.min.css" />
+
+    <!-- Title -->
+    <title>Assets - Documentación de Teamsite</title>
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header>
+      <nav class="navbar navbar-expand-lg p-3 mb-2 shadow-sm">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="../../">Documentación de Teamsite</a>
+        </div>
+      </nav>
+    </header>
+    <!-- HEADER FINISHES -->
+
+    <!-- MAIN CONTENT -->
+    <main class="container">
+      <h1 class="main-title"><i class="fa fa-file"></i>Assets</h1>
+
+      <section class="main-section">
+        <h2>Descripción general</h2>
+        <p>
+          Los assets serían aquellos archivos como íconos, imágenes o fuentes
+          que una página puede utilizar. Sin embargo el procedimiento para
+          <a href="#importar">importar</a>, reemplazar o
+          <a href="#eliminar">eliminar</a> assets de Teamsite, aplica también
+          para scripts, hojas de estilos, o cualquier otro tipo de archivo como
+          los XSL o XSLT.
+        </p>
+      </section>
+
+      <section class="main-section">
+        <h2>Ubicación</h2>
+        <p>
+          Los assets se encuentran en una de las carpetas principales de
+          Teamsite <strong>iwov-resources/errepar</strong>:
+          <span class="copy-container" id="assetsUrl"
+            >//iwserver/default/main/Errepar/WORKAREA/default/iwov-resources/errepar</span
+          >
+          <button
+            class="btn btn-sm btn-secondary copy-this"
+            data-id="assetsUrl"
+          >
+            Copiar
+          </button>
+        </p>
+      </section>
+
+      <!-- IMPORTAR -->
+      <section class="main-section" id="importar">
+        <h2>Importar nuevos assets</h2>
+        <ul>
+          <li>
+            Dirigirse a una de las siguientes rutas:
+            <ul>
+              <p><strong>Para hojas de estilos (CSS):</strong></p>
+              <li>
+                Para la <strong>Home</strong> y otros:
+                <span class="copy-container" id="homeCssUrl"
+                  >//iwserver/default/main/Errepar/WORKAREA/default/iwov-resources/errepar/home/css</span
+                >
+                <button
+                  class="btn btn-sm btn-secondary copy-this"
+                  data-id="homeCssUrl"
+                >
+                  Copiar
+                </button>
+              </li>
+              <li>
+                <strong>CSS común</strong> a todas las páginas como
+                <i>header-footer.css</i>:
+                <span class="copy-container" id="commonCssUrl"
+                  >//iwserver/default/main/Errepar/WORKAREA/default/iwov-resources/errepar/common/css</span
+                >
+                <button
+                  class="btn btn-sm btn-secondary copy-this"
+                  data-id="commonCssUrl"
+                >
+                  Copiar
+                </button>
+              </li>
+              <p><strong>Para javascript:</strong></p>
+              <li>
+                <p>Para scripts de la <strong>home</strong>:</p>
+                <span class="copy-container" id="homeScriptsUrl"
+                  >//iwserver/default/main/Errepar/WORKAREA/default/iwov-resources/errepar/common/js/home</span
+                >
+                <button
+                  class="btn btn-sm btn-secondary copy-this"
+                  data-id="homeScriptsUrl"
+                >
+                  Copiar
+                </button>
+              </li>
+              <li>
+                <p>Para <strong>otros scripts</strong>:</p>
+                <span class="copy-container" id="otherScriptsUrl"
+                  >//iwserver/default/main/Errepar/WORKAREA/default/iwov-resources/errepar/common/js</span
+                >
+                <button
+                  class="btn btn-sm btn-secondary copy-this"
+                  data-id="otherScriptsUrl"
+                >
+                  Copiar
+                </button>
+              </li>
+            </ul>
+          </li>
+          <li>
+            Hacer click en importar:
+            <img
+              src="../../assets/images/importar-assets-1.png"
+              alt="Importar un asset"
+            />
+          </li>
+          <li>
+            Arrastrar el nuevo archivo o el archivo a reemplazar y presionar
+            "importar" nuevamente
+            <img
+              src="../../assets/images/importar-assets-2.png"
+              alt="Importar un asset"
+            />
+          </li>
+          <li>Luego de importado presionar "Cancelar" para volver.</li>
+          <li>
+            El nuevo archivo o el archivo actualizado aparecerá con un ícono de
+            editado como muestra la imagen:
+            <img
+              src="../../assets/images/importar-assets-3.png"
+              alt="Icono de editado muestra un lápiz y una hoja"
+            />
+            <p>Esto significa que los cambios no se han publicado.</p>
+          </li>
+          <li><a href="#publicar">Publicar</a> los cambios</li>
+        </ul>
+      </section>
+
+      <!-- REEMPLAZAR -->
+      <section class="main-section" id="reemplazar">
+        <h2>Reemplazar un asset</h2>
+        <p>Para actualizar un asset se debe reemplazar el anterior.</p>
+        <p>
+          Para hacerlo, se importa el asset con el mismo nombre que el asset a
+          sobreescribir y <strong>se presiona sobreescribir</strong> antes de
+          "importar"
+        </p>
+      </section>
+
+      <!-- ELIMINAR -->
+      <section class="main-section" id="eliminar">
+        <h2>Eliminar assets</h2>
+        <ul>
+          <li>Dirigirse a la ruta donde se encuentra el activo a eliminar.</li>
+          <li>
+            Seleccionar el archivo, ir a la pestaña "Archivo" y presionar
+            "Eliminar"
+            <img
+              src="../../assets/images/eliminar-assets-1.png"
+              alt="Eliminar un asset"
+            />
+          </li>
+          <li>Se abrirá un mensaje de confirmación. Presionar "Eliminar"</li>
+          <li>
+            <a href="#publicar">Publicar</a> los cambios después de eliminar.
+          </li>
+        </ul>
+      </section>
+
+      <!-- PUBLICAR -->
+      <section class="main-section" id="publicar">
+        <h2>Publicar los cambios</h2>
+        <ul>
+          <li>
+            Para publicar los cambios, sin movernos de la ruta actual donde se
+            encuentra el archivo nuevo/editado/eliminado, presionar el botón de
+            "Enviar".
+            <img
+              src="../../assets/images/importar-assets-4.png"
+              alt="Botón de Enviar"
+            />
+          </li>
+          <li>
+            En la ventana emergente seleccionar un workflow: "Submit Now" o
+            "Custom Workflow" o "Article Publishing" y "Siguiente".
+            <img
+              src="../../assets/images/importar-assets-5.png"
+              alt="Seleccionar un workflow"
+            />
+          </li>
+          <li>
+            En caso de que se solicite, seleccionar un usuario como reviewer.
+            Preferentemente el usuario de uno mismo ya que esto otorga permisos
+            para aprobar la tarea si hace falta. Opcionalmente agregar una
+            descripción a la tarea que se realiza. Presionar "Enviar".
+            <img
+              src="../../assets/images/importar-assets-6.png"
+              alt="Seleccionar un workflow"
+            />
+          </li>
+          <li>
+            El icono de editado debería desaparecer del activo nuevo/editado y
+            este debería publicarse. En caso de ser un activo eliminado, este
+            debería desaparecer. Recargar la página si no se muestran los
+            cambios realizados.
+          </li>
+        </ul>
+      </section>
+    </main>
+
+    <!-- Button to scroll to top -->
+    <div class="scroll-top">
+      <button id="scrollTopBtn" class="btn btn-primary float-right">
+        <i class="fa fa-chevron-up"></i>
+      </button>
+    </div>
+
+    <!-- Custom Scripts -->
+    <script src="../../js/index.js" type="module"></script>
+  </body>
+</html>

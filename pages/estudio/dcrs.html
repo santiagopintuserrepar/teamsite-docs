@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Bootstrap -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- FONT AWESOME -->
+    <script
+      src="https://kit.fontawesome.com/2d430cba2e.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="../../css/style.min.css" />
+
+    <!-- Title -->
+    <title>DCR E-Studio - Documentación de Teamsite</title>
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header>
+      <nav class="navbar navbar-expand-lg p-3 mb-2 shadow-sm">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="../../">Documentación de Teamsite</a>
+        </div>
+      </nav>
+    </header>
+    <!-- HEADER FINISHES -->
+
+    <!-- MAIN CONTENT -->
+    <main class="container">
+      <h1 class="main-title">
+        <i class="fa-solid fa-file-pen"></i>DCR en Experience Studio
+      </h1>
+
+      <section class="main-section">
+        <h2>Crear un DCR o "Content Template"</h2>
+
+        <iframe
+          src="https://drive.google.com/file/d/1ugzIXCpc_vRUXh5Gi9WrBxMSeBoCwPdB/preview"
+          class="video"
+          allow="fullscreen"
+        ></iframe>
+
+        <ol>
+          <li>
+            <p>
+              Para crear un DCR dirigirse a Experience Studio, ya sea para
+              <a
+                href="https://ui.public.awsalphadevqa.com/estudio/#/project/Errepar/sites/errepar/pages"
+                >DEVQA</a
+              >
+              o
+              <a
+                href="https://ui.public.awsalphaprod.com/estudio/#/project/Errepar/sites/errepar/pages"
+                >PROD</a
+              >
+            </p>
+          </li>
+          <li>
+            En el menú de navegación lateral seleccionar
+            <strong>"Assets/Content Items"</strong>
+            <img
+              src="../../assets/images/crear-dcr-1.png"
+              alt="Select Content Item"
+            />
+          </li>
+          <li>
+            Seleccionar la ubicación del nuevo DCR
+            <ul>
+              <li>
+                <strong>errepar-home</strong>: Para componentes dentro de la
+                Home.
+              </li>
+              <li>
+                <strong>generic</strong>: Para componentes comunes como Header,
+                Footer, Banners, etc...
+              </li>
+              <li>
+                <strong>marketing</strong>: En "marketing" hay DCRs para
+                componentes más específicos de cada página.
+              </li>
+              <li>
+                Tener en cuenta que no hay una taxonomía definida para la
+                ubicación de los DCRs.
+              </li>
+            </ul>
+            <p>
+              Después de seleccionar la ubicación,
+              <strong>+New Content Template</strong>
+            </p>
+            <img src="../../assets/images/crear-dcr-2.png" alt="" />
+          </li>
+          <li>
+            Aparecerá una ventana de edición del template como se ve en la
+            imagen. Dónde se pueden arrastrar campos del DCR al template.
+            <img
+              src="../../assets/images/crear-dcr-3.png"
+              alt="Edición del template"
+            />
+          </li>
+        </ol>
+      </section>
+    </main>
+
+    <!-- Button to scroll to top -->
+    <div class="scroll-top">
+      <button id="scrollTopBtn" class="btn btn-primary float-right">
+        <i class="fa fa-chevron-up"></i>
+      </button>
+    </div>
+
+    <!-- Custom Scripts -->
+    <script src="../../js/index.js" type="module"></script>
+  </body>
+</html>

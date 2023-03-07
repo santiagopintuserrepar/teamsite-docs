@@ -1,0 +1,26 @@
+// Colors
+$markColor: #ffea00;
+$darkGray: #232323;
+$codeBg: $darkGray;
+$blanco: #ffffff;
+$gris: #b3b3b3;
+$grisLight: #f0f0f0;
+$codeColor: #c1c1c1;
+$lightBlue: #dee2e6;
+$shadowColor: rgba($darkGray, 0.5);
+$overlayColor: $shadowColor;
+
+// BREAKPOINTS for responsive development
+$mobileMin: 383px;
+$tabletMin: 576px;
+$desktopMin: 768px;
+$largeMin: 1200px;
+
+// Borders
+$borderColor: $lightBlue;
+$borderWidth: 1px;
+$sectionBorder: $borderWidth solid $borderColor;
+$borderRadius: 0.8rem;
+
+// Shadows
+$shadow: 0 0 6px -2px $shadowColor;
