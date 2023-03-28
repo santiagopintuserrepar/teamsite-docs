@@ -1,6 +1,20 @@
 export const copyTexts = () => {
   const btns = document.querySelectorAll(".copy-this");
+
   btns.forEach((btn) => {
+    /* Behavior when copy success or fails */
+    const onCopy = (success = true) => {
+      /* ON REJECTED */
+      btn.classList.toggle("btn-secondary");
+      btn.classList.toggle(success ? "btn-success" : "btn-danger");
+      btn.innerText = success ? "Copiado" : "Error";
+      setTimeout(() => {
+        btn.classList.toggle("btn-secondary");
+        btn.classList.toggle(success ? "btn-success" : "btn-danger");
+        btn.innerText = "Copiar";
+      }, 3000);
+    };
+
     let id = btn.getAttribute("data-id");
     btn.addEventListener("click", (e) => {
       let textToCopy = document.getElementById(id).innerText;
@@ -17,17 +31,6 @@ export const copyTexts = () => {
       } else {
         onCopy(false);
       }
-      const onCopy = (success = true) => {
-        /* ON REJECTED */
-        btn.classList.toggle("btn-secondary");
-        btn.classList.toggle(success ? "btn-success" : "btn-danger");
-        btn.innerText = success ? "Copiado" : "Error";
-        setTimeout(() => {
-          btn.classList.toggle("btn-secondary");
-          btn.classList.toggle(success ? "btn-success" : "btn-danger");
-          btn.innerText = "Copiar";
-        }, 3000);
-      };
     });
   });
 };
@@ -44,4 +47,3 @@ export const goToTop = () => {
     window.scrollTo(0, 0);
   };
 };
-

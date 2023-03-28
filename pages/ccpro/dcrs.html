@@ -22,28 +22,76 @@
     <link rel="stylesheet" href="../../css/style.min.css" />
 
     <!-- Title -->
-    <title>DCR CCPro - Documentación de Teamsite</title>
+    <title>DCR CCPro - Teamsite Docs</title>
   </head>
   <body>
-    <!-- HEADER -->
-    <header>
-      <nav class="navbar navbar-expand-lg p-3 mb-2 shadow-sm">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="../../">Documentación de Teamsite</a>
-        </div>
-      </nav>
-    </header>
-    <!-- HEADER FINISHES -->
+    <!-- HEADER INCLUDE -->
+    <div id="header"></div>
 
     <!-- MAIN CONTENT -->
     <main class="container">
       <h1 class="main-title"><i class="fa-solid fa-file-pen"></i>DCR CCPro</h1>
 
+      <!-- Introducción -->
+      <section class="main-section">
+        <h2>Introducción</h2>
+        <p>
+          Un DCR es una solicitud de cambio de datos (En inglés "Data Change
+          Request"). Esta solicitud se genera por medio de un formulario. Este
+          formulario es el DCR.
+        </p>
+        <p>
+          Hay basicamente 2 formas de crear DCRs y se recomiendan en diferentes
+          situaciones.
+        </p>
+        <ol>
+          <li>
+            <h4>In-component DCR</h4>
+            <p>
+              El primer tipo de DCR es el más simple. Se define dentro del
+              componente desde CCPro simplemente creando etiquetas de captura de
+              datos o "input tags".
+            </p>
+            <p>
+              Esta forma de hacerlo no permite reutilizar la información
+              definida por el usuario en otros componentes. Solo existe dentro
+              del componente (no genera un archivo .xml que se pueda leer desde
+              cualquier componente).
+            </p>
+            <p>
+              Se define directamente en la sección
+              <b
+                ><a href="../ccpro/componentes.html#DCR"
+                  >XML del contenido</a
+                ></b
+              >
+              del componente
+            </p>
+            <p>Ejemplo:</p>
+            <pre>
+  &lt;Data&gt;
+    &lt;Datum ID="D01" Type="String" Name="URL"/&gt;
+    &lt;Datum ID="D02" Type="String" Name="Estilos"&gt;width:100%; height:2000px;&lt;/Datum&gt;
+  &lt;/Data&gt;</pre
+            >
+            <p>
+              En este ejemplo se definen dos campos llamados "URL" y "Estilos"
+              que permiten a un/a autor/a editar el componente. Ambos campos son
+              del tipo String
+            </p>
+            <p>
+              El valor "width:100%; height:2000px;" será un valor por defecto.
+            </p>
+          </li>
+          <li><h4>DCR Externo</h4></li>
+        </ol>
+      </section>
+
       <!-- Ubicación -->
       <section class="main-section">
         <h2>Ubicación</h2>
-        <p>Los DCRs se localizan en la siguiente ruta de CCPRO:</p>
-        <span id="dcrUrl"
+        <p>Los DCRs externos se localizan en la siguiente ruta de CCPRO:</p>
+        <span class="copy-container" id="dcrUrl"
           >//iwserver/default/main/Errepar/WORKAREA/default/templatedata</span
         >
         <button class="btn btn-sm btn-secondary copy-this" data-id="dcrUrl">
@@ -54,10 +102,134 @@
       <section class="main-section">
         <h2>Crear un DCR</h2>
         <p>
-          Para crear un DCR dirigirse a
+          Para crear un <b>DCR externo</b> dirigirse a
           <a href="../estudio/dcrs.html">DCR en Experience Studio</a>
         </p>
+        <p></p>
       </section>
+
+      <!-- IMPLEMENTAR EN UN COMPONENTE -->
+      <section id="componente" class="main-section">
+        <h2>Implementar el DCR externo en un componente</h2>
+        <ol>
+          <li>
+            <p>
+              Dirigirse a CCPRO en la ruta indicada en
+              <a target="_blank" href="./componentes.html">Componentes</a>
+            </p>
+          </li>
+          <li>
+            <p>
+              Editar un componente o
+              <a target="_blank" href="./componentes.html#crearComponente"
+                >crear uno</a
+              >
+            </p>
+          </li>
+          <li>
+            En el formulario de edición/creación de un componente dirigirse al
+            último campo "Content XML" o "XML del Contenido"
+            <img
+              src="../../assets/images/importar-dcr-1.png"
+              alt="Importar un DCR"
+            />
+          </li>
+          <li>
+            Importar el DCR usando el siguiente código
+            <p>
+              Reemplazar <b>nombreCategoria</b> por la categoria del DCR que es
+              el nombre de la carpeta donde se ubica el content template. Por
+              ejemplo <b>"marketing"</b>.
+              <a href="../estudio/dcrs.html#category"
+                >Ver Category en Experience Studio</a
+              >
+            </p>
+            <p>
+              Reemplazar <b>dcrName</b> por el campo name del DCR que es el
+              nombre del content template por ejemplo
+              <b>"articlesEntreColegas"</b>
+            </p>
+            <pre>
+&lt;Data&gt;
+  &lt;Datum ID="D01" Type="DCR" <mark>Name="DCR"</mark>&gt;
+    &lt;DCR Category="<mark>nombreCategoria</mark>" Type="<mark>dcrName</mark>"/&gt;
+  &lt;/Datum&gt;
+&lt;/Data&gt;</pre
+            >
+            <p>
+              El atributo Name="DCR" será el valor por el cual acceder al DCR
+              desde el la sección "Aspecto" o sea desde el HTML del componente
+              (template.xsl)
+            </p>
+          </li>
+        </ol>
+      </section>
+      <!-- FIN DE IMPLEMENTAR EN UN COMPONENTE -->
+
+      <!-- IMPLEMENTAR EN UN TEMPLATE -->
+      <section id="templatexsl" class="main-section">
+        <h2>Implementar el DCR en un template .xsl</h2>
+
+        <ul>
+          <li>
+            Después de
+            <a href="../ccpro/templates.html#crear"
+              >crear un template de formato .xsl</a
+            >, ir al .xsl en el entorno local.
+          </li>
+          <li>
+            <p>
+              Si el componente es editable por el autor, o sea, si hay un DCR:
+            </p>
+            <p>
+              Se accede a la metadata contenida dentro del respectivo
+              <a href="./componentes.html#DCR"
+                >DCR importado en el componente.</a
+              >
+              o desde el <a href="#inComponent">DCR in-component</a>
+            </p>
+            <p>
+              Para conseguirlo, se utiliza el tag
+              <code>&lt;xsl:value-of ...</code> agregando el atributo
+              <code>select</code> con la ruta al DCR.
+            </p>
+            <p>Por ejemplo (DCR Externo):</p>
+            <pre>
+  &lt;h2 class="title-1"&gt;
+    &lt;xsl:value-of select = "/Properties/Data/Datum/DCR/Content/CardTitle" /&gt;
+  &lt;/h2&gt;
+          </pre
+            >
+            <p>
+              De esta manera, el valor de <code>CardTitle</code> se insertará
+              dentro del tag <code>&lt;h2&gt;</code>
+            </p>
+            <p>Ejemplo DCR in-component:</p>
+            <pre>
+  &lt;iframe frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="true"&gt;
+    &lt;xsl:attribute name="src"&gt;
+      &lt;xsl:value-of select = "/Properties/Data/Datum[@Name='URL']"/&gt;
+    &lt;/xsl:attribute&gt;
+    &lt;xsl:attribute name="style"&gt;
+      &lt;xsl:value-of select = "/Properties/Data/Datum[@Name='Estilos']"/&gt;
+    &lt;/xsl:attribute&gt;
+  &lt;/iframe&gt;
+            </pre>
+            <p>Accedemos al valor del campo <b>URL</b> seleccionando el campo por el <b>atributo Name</b>.</p>
+            <p>Definimos el atributo <b>src</b> del iframe que proviene del campo <b>URL</b> del DCR definido dentro del componente</p>
+            <p>
+              <strong
+                >Para más información sobre qué tags usar en cada caso acceder a
+                la
+                <a href="https://www.w3schools.com/xml/xsl_intro.asp"
+                  >Documentación de XSLT</a
+                ></strong
+              >
+            </p>
+          </li>
+        </ul>
+      </section>
+      <!-- FIN DE IMPLEMENTAR EN UN TEMPLATE -->
     </main>
 
     <!-- Button to scroll to top -->

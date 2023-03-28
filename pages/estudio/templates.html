@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Bootstrap -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- FONT AWESOME -->
+    <script
+      src="https://kit.fontawesome.com/2d430cba2e.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="../../css/style.min.css" />
+
+    <!-- Title -->
+    <title>Templates - Teamsite Docs</title>
+  </head>
+  <body>
+    <!-- HEADER INCLUDE -->
+    <div id="header"></div>
+
+    <!-- MAIN CONTENT -->
+    <main class="container">
+      <h1 class="main-title">
+        <i class="fa-solid fa-cube"></i>Templates (Experience Studio)
+      </h1>
+
+      <!-- Introducción -->
+      <section class="main-section">
+        <h2>Introducción</h2>
+        <p>
+          Un template es una plantilla o un
+          <b
+            >molde para
+            <a href="../estudio/pages.html#crear">crear páginas web</a></b
+          >. Cada template, es un archivo de extensión <b>.template</b> del cual
+          se crean páginas de extensión <b>.page</b>. Como lo ilustra la imagen:
+        </p>
+        <img
+          src="../../assets/images/template-es-1.png"
+          alt="Templates y pages"
+        />
+        <p>
+          En el template se importan todos los scripts <b>.js</b> y hojas de
+          estilos <b>.css</b> que sean necesarias para el correcto
+          funcionamiento de la página
+        </p>
+        <p>
+          Las páginas creadas en base al template
+          <b>van a heredar estas hojas de estilos y scripts</b>. Por eso, de
+          necesitar agregar o eliminar alguna hoja de estilos o script de una
+          página, se debe editar el template respectivo. De esta forma se
+          modificarán también todas las páginas que utilicen este template.
+        </p>
+        <p>
+          Desde el template también se importan todos los componentes que se
+          vayan a utilizar en las páginas, las cuales heredarán los mismos
+          componentes.
+        </p>
+        <p>
+          Al igual que con los scripts y CSS, para agregar o quitar componentes
+          de una página, se debe hacer desde el template, con
+          <a href="#excepcion">esta excepción</a>.
+        </p>
+      </section>
+
+      <section class="main-section" id="crear">
+        <!-- CREAR UN TEMPLATE -->
+        <h2>Crear un template</h2>
+        <ol>
+          <li>
+            Ir a
+            <a
+              href="https://ui.public.awsalphadevqa.com/estudio/#/project/Errepar/sites/errepar/templates"
+              >Experience Studio /templates (DEVQA)</a
+            >
+          </li>
+          <li>
+            Clickear en <b>"New Template"</b> y después
+            <b>"Create new template"</b>
+            <img
+              src="../../assets/images/crear-template-es-1.png"
+              alt="Crear un template"
+            />
+          </li>
+          <li>
+            <ul>
+              <li>
+                <p>
+                  Para crear un template completamente blanco ir a
+                  <b>"Global Templates"</b> y luego seleccionar el template
+                  <b>"blank"</b>. Finalmente presionar <b>"Next"</b>
+                </p>
+                <img
+                  src="../../assets/images/crear-template-es-2.png"
+                  alt="Seleccionar un template"
+                />
+              </li>
+              <li>
+                <p>
+                  Para crear un template con header, footer con sus respectivos
+                  scripts y estilos ir a <b>"Site Templates"</b> y luego
+                  seleccionar el template
+                  <b>"header-footer-template"</b> (Buscarlo si no aparece).
+                  Finalmente presionar <b>"Next"</b>
+                </p>
+                <img
+                  src="../../assets/images/crear-template-es-3.png"
+                  alt="Seleccionar un template"
+                />
+              </li>
+            </ul>
+          </li>
+          <li>
+            Luego de seleccionar un template base para la creación de este nuevo
+            template, definimos el nombre y al aceptar, aparecerá el nuevo
+            template en la lista de templates
+            <img
+              src="../../assets/images/crear-template-es-4.png"
+              alt="Editar template"
+            />
+          </li>
+          <li>
+            <a href="#componentes">Agregar componentes</a>
+          </li>
+          <li>
+            Para linkear CSS y JS clickear en el menú hamburguesa en la esquina superior izquierda
+            <img
+              src="../../assets/images/crear-template-es-8.png"
+              alt="Menú hamburguesa"
+            />
+          </li>
+          <li>
+            Para linkear CSS ir a la sección <b>CSS Resources</b> y clickear en <b>"+ Add a css file"</b>
+            <img
+              src="../../assets/images/crear-template-es-9.png"
+              alt="Agregar CSS"
+            />
+          </li>
+          <li>
+            Para linkear JS ir a la sección <b>Sript Resources</b> y clickear en <b>"+ Add a script file"</b>
+            <img
+              src="../../assets/images/crear-template-es-10.png"
+              alt="Agregar Scripts"
+            />
+          </li>
+          <li>Esos dos botones te nos permiten navegar por el directorio de archivos en CCPRO donde se ubican nuestros Scripts y Hojas de estilos.</li>
+        </ol>
+        <p>Listo. El template estaría finalizado. Ahora se pueden <a href="../estudio/pages.html#crear">crear páginas basadas en este template</a></p>
+      </section>
+
+      <section class="main-section" id="componentes">
+        <h2>Añadir componentes</h2>
+        <ol>
+          <li>
+            Seleccionar "Edit" en el template en cuestión
+            <img
+              src="../../assets/images/crear-template-es-4.png"
+              alt="Editar template"
+            />
+          </li>
+          <li>
+            Seleccionar editar y luego de varios segundos aparecerá la vista de
+            edición.
+          </li>
+          <li>
+            Agregamos los componentes haciendo "hover" sobre la pantalla de
+            edición y presionando el botón de "+" en el centro de la pantalla
+            <img
+              src="../../assets/images/crear-template-es-5.png"
+              alt="Agregar un componente"
+            />
+            En la imagen se ven 3 botones del lado derecho del componente:
+            <ol>
+              <li>
+                El primero es para editar el DCR del componente si es que el
+                componente posee un DCR
+              </li>
+              <li>El segundo es para duplicar el componente</li>
+              <li>
+                Por último, con este botón se elimina el componente del
+                template, solamente esta instancia del componente (no se elimina
+                el componente de teamsite).
+              </li>
+            </ol>
+          </li>
+          <li>
+            Al presionar el botón <b>"+"</b> para agregar un componente,
+            aparecerá la siguiente vista. Para agregar un componente "custom"
+            clickear en custom components. Luego clickear en el componente deseado. 
+            <img
+              src="../../assets/images/crear-template-es-6.png"
+              alt="Agregar un componente custom"
+            />
+          </li>
+          <li>
+            Al hacer click en el componente, este se agregará automáticamente.
+            <img
+              src="../../assets/images/crear-template-es-7.png"
+              alt="Agregar un componente custom"
+            />
+          </li>
+        </ol>
+      </section>
+    </main>
+
+    <!-- Button to scroll to top -->
+    <div class="scroll-top">
+      <button id="scrollTopBtn" class="btn btn-primary float-right">
+        <i class="fa fa-chevron-up"></i>
+      </button>
+    </div>
+
+    <!-- Custom Scripts -->
+    <script src="../../js/index.js" type="module"></script>
+  </body>
+</html>

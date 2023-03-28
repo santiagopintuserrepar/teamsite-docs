@@ -22,114 +22,92 @@
     <link rel="stylesheet" href="../../css/style.min.css" />
 
     <!-- Title -->
-    <title>Componentes - Documentación de Teamsite</title>
+    <title>Componentes - Teamsite Docs</title>
   </head>
   <body>
-    <!-- HEADER -->
-    <header>
-      <nav class="navbar navbar-expand-lg p-3 mb-2 shadow-sm">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="../../">Documentación de Teamsite</a>
-        </div>
-      </nav>
-    </header>
-    <!-- HEADER FINISHES -->
+    <!-- HEADER INCLUDE -->
+    <div id="header"></div>
 
-    <div class="row">
-      <div class="col-3">
-        <nav
-          id="componentsNavigation"
-          class="h-100 flex-column align-items-stretch pe-4 border-end"
+    <!-- MAIN CONTENT -->
+    <main
+      class="container"
+      data-bs-spy="scroll"
+      data-bs-target="#componentsNavigation"
+      data-bs-smooth-scroll="true"
+      class="scrollspy-example-2"
+      tabindex="0"
+    >
+      <h1 class="main-title"><i class="fa-solid fa-cubes"></i>Componentes</h1>
+
+      <!-- Ubicación -->
+      <section class="main-section" id="ubicacion">
+        <h2>Ubicación</h2>
+        <p>Los componentes se localizan en la siguiente ruta de CCPRO:</p>
+        <span class="copy-container" id="componentsUrl"
+          >//iwserver/iwadmin/main/livesite/component/WORKAREA/shared/Custom</span
         >
-          <nav class="nav nav-pills flex-column">
-            <a class="nav-link" href="#ubicacion">Ubicación</a>
-            <a class="nav-link" href="#crearComponente">Crear un componente</a>
-          </nav>
-        </nav>
-      </div>
+        <button
+          class="btn btn-sm btn-secondary copy-this"
+          data-id="componentsUrl"
+        >
+          Copiar
+        </button>
+      </section>
 
-      <!-- MAIN CONTENT -->
-      <main
-        class="col-9 page-content"
-        data-bs-spy="scroll"
-        data-bs-target="#componentsNavigation"
-        data-bs-smooth-scroll="true"
-        class="scrollspy-example-2"
-        tabindex="0"
-      >
-        <h1 class="main-title"><i class="fa-solid fa-cubes"></i>Componentes</h1>
-
-        <!-- Ubicación -->
-        <section class="main-section" id="ubicacion">
-          <h2>Ubicación</h2>
-          <p>Los componentes se localizan en la siguiente ruta de CCPRO:</p>
-          <span id="componentsUrl"
-            >//iwserver/iwadmin/main/livesite/component/WORKAREA/shared/Custom</span
-          >
-          <button
-            class="btn btn-sm btn-secondary copy-this"
-            data-id="componentsUrl"
-          >
-            Copiar
-          </button>
-        </section>
-
-        <section class="main-section" id="crearComponente">
-          <!-- CREAR UN COMPONENTE -->
-          <h2>Crear un componente</h2>
-          <ol>
-            <li>Ir a CCPro</li>
-            <li>Dirigirse a la ruta de los componentes</li>
-            <li>Seleccionar la carpeta donde se ubicará el componente</li>
-            <li>
-              <p>Con la carpeta seleccionada dirigirse a "Archivo"</p>
-              <img
-                width="250px"
-                src="../../assets/images/crear-componente-1.png"
-                alt="Abrir archivo"
-              />
-            </li>
-            <li>
-              <p>Seleccionar "Nuevo componente"</p>
-              <img
-                width="250px"
-                src="../../assets/images/crear-componente-2.png"
-                alt="Nuevo componente"
-              />
-            </li>
-            <li>
-              <p>
-                Se abrirá una ventana popup. Seleccionar "XSLT 1.0" y
-                "Siguiente"
-              </p>
-              <img
-                width="250px"
-                src="../../assets/images/crear-componente-3.png"
-                alt="Opciones del componente"
-              />
-            </li>
-            <li>
-              <p>
-                Llenar el formulario escribiendo el nombre, descripción y otros
-                datos del componente
-              </p>
-            </li>
-            <li id="xsl">
-              Definir el HTML del componente. Se incluye el HTML en la sección
-              <b>"Aspecto"</b> del componente. Para hacerlo hay dos
-              alternativas.
-              <ul>
-                <li>
-                  <p>Recomendada:</p>
-                  <p>
-                    Idealmente importar un template XSL que contenga el HTML del
-                    componente
-                    <a href="templates.html">Ver sección Templates (.xsl)</a>:
-                  </p>
-                  <p>
-                    Este es un ejemplo real del componente <b>articleListing</b>
-                  </p>
-                  <pre>
+      <section class="main-section" id="crearComponente">
+        <!-- CREAR UN COMPONENTE -->
+        <h2>Crear un componente</h2>
+        <ol>
+          <li>Ir a CCPro</li>
+          <li>Dirigirse a la ruta de los componentes</li>
+          <li>Seleccionar la carpeta donde se ubicará el componente</li>
+          <li>
+            <p>Con la carpeta seleccionada dirigirse a "Archivo"</p>
+            <img
+              width="250px"
+              src="../../assets/images/crear-componente-1.png"
+              alt="Abrir archivo"
+            />
+          </li>
+          <li>
+            <p>Seleccionar "Nuevo componente"</p>
+            <img
+              width="250px"
+              src="../../assets/images/crear-componente-2.png"
+              alt="Nuevo componente"
+            />
+          </li>
+          <li>
+            <p>
+              Se abrirá una ventana popup. Seleccionar "XSLT 1.0" y "Siguiente"
+            </p>
+            <img
+              width="250px"
+              src="../../assets/images/crear-componente-3.png"
+              alt="Opciones del componente"
+            />
+          </li>
+          <li>
+            <p>
+              Llenar el formulario escribiendo el nombre, descripción y otros
+              datos del componente
+            </p>
+          </li>
+          <li id="xsl">
+            Definir el HTML del componente. Se incluye el HTML en la sección
+            <b>"Aspecto"</b> del componente. Para hacerlo hay dos alternativas.
+            <ul>
+              <li>
+                <p>Recomendada:</p>
+                <p>
+                  Idealmente importar un template XSL que contenga el HTML del
+                  componente
+                  <a href="templates.html">Ver sección Templates (.xsl)</a>:
+                </p>
+                <p>
+                  Este es un ejemplo real del componente <b>articleListing</b>
+                </p>
+                <pre>
   &lt;!DOCTYPE html-entities SYSTEM
   "http://www.interwoven.com/livesite/xsl/xsl-html.dtd"&gt;
   &lt;xsl:stylesheet version="1.0"
@@ -148,51 +126,50 @@
     &lt;/xsl:template&gt;
   &lt;/xsl:stylesheet&gt;
                   </pre>
-                  <p>
-                    El valor del atributo <b>name debe ser idéntico</b> al
-                    atributo
-                    <b>name</b>
-                    definido en el template .xsl
-                  </p>
-                </li>
-                <li>
-                  <p>
-                    <b>Alternativamente</b> insertar el HTML del componente en
-                    la sección "Aspecto" directamente dentro del tag
-                    <code
-                      >&lt;xsl:template match="/"&gt;&lt;/xsl:template&gt;</code
-                    >
-                  </p>
-                  <img
-                    width="250px"
-                    src="../../assets/images/crear-componente-4.png"
-                    alt="Agregar código HTML"
-                  />
-                  <p>
-                    Esta opción <b>NO es la recomendada</b> ya que dificulta el
-                    mantenimiento del componente.
-                  </p>
-                  <p>
-                    Desarrollar el componente de esta manera implica que al
-                    editar el componente, se requiera una re-deploy de todas las
-                    páginas y templates de Experience Studio que usen este
-                    componente.
-                  </p>
-                </li>
-              </ul>
-            </li>
-            <li id="DCR">
-              <p>
-                Finalmente se define el XML del componente o los DCR "Data
-                Change Request" del componente. Ver
-                <a href="./dcrs.html">DCRs</a> para más información sobre DCRs
-              </p>
-              <p>
-                Dentro de la sección <b>XML del contenido</b> se insertan los
-                tags correspondientes
-              </p>
-              <p>A modo de ejemplo:</p>
-              <pre>
+                <p>
+                  El valor del atributo <b>name debe ser idéntico</b> al
+                  atributo
+                  <b>name</b>
+                  definido en el template .xsl
+                </p>
+              </li>
+              <li>
+                <p>
+                  <b>Alternativamente</b> insertar el HTML del componente en la
+                  sección "Aspecto" directamente dentro del tag
+                  <code
+                    >&lt;xsl:template match="/"&gt;&lt;/xsl:template&gt;</code
+                  >
+                </p>
+                <img
+                  width="250px"
+                  src="../../assets/images/crear-componente-4.png"
+                  alt="Agregar código HTML"
+                />
+                <p>
+                  Esta opción <b>NO es la recomendada</b> ya que dificulta el
+                  mantenimiento del componente.
+                </p>
+                <p>
+                  Desarrollar el componente de esta manera implica que al editar
+                  el componente, se requiera una re-deploy de todas las páginas
+                  y templates de Experience Studio que usen este componente.
+                </p>
+              </li>
+            </ul>
+          </li>
+          <li id="DCR">
+            <p>
+              Finalmente se define el XML del componente o los DCR del
+              componente. Ver
+              <a href="./dcrs.html">DCRs</a> para más información sobre DCRs
+            </p>
+            <p>
+              Dentro de la sección <b>XML del contenido</b> se insertan los tags
+              correspondientes
+            </p>
+            <p>A modo de ejemplo:</p>
+            <pre>
   <mark>&lt;Data&gt;</mark>
     &lt;External&gt;
       &lt;Parameters&gt;
@@ -209,20 +186,18 @@
       &lt;Method&gt;execute&lt;/Method&gt;
     &lt;/External&gt;
   &lt;/Data&gt;
-            </pre
-              >
-            </li>
-            <li>
-              Los estilos y scripts de los componentes se insertan en otra
-              instancia. Ver
-              <a href="../estudio/templates.html"
-                >Templates de Experience Studio</a
-              >.
-            </li>
-          </ol>
-        </section>
-      </main>
-    </div>
+            </pre>
+          </li>
+          <li>
+            Los estilos y scripts de los componentes se insertan en otra
+            instancia. Ver
+            <a href="../estudio/templates.html"
+              >Templates de Experience Studio</a
+            >.
+          </li>
+        </ol>
+      </section>
+    </main>
 
     <!-- Button to scroll to top -->
     <div class="scroll-top">

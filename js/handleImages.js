@@ -1,7 +1,10 @@
 export const visualizeImg = () => {
-  const overlay = createOverlay();
   document.querySelectorAll("img").forEach((img) => {
+    const overlay = createOverlay();
     img.addEventListener("click", () => {
+      toggleImage(img, overlay);
+    });
+    overlay.addEventListener("click", () => {
       toggleImage(img, overlay);
     });
   });

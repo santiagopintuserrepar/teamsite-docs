@@ -27,6 +27,7 @@
   "homepage": "https://gitlab.com/errepar_sa1/sandbox/developers/santiagopintus/custom-teamsite-docs#readme",
   "dependencies": {
     "bootstrap": "^5.2.3",
+    "jquery": "^3.6.4",
     "sass": "^1.58.3"
   }
 }

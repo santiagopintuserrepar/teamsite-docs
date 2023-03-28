@@ -22,31 +22,24 @@
     <link rel="stylesheet" href="../../css/style.min.css" />
 
     <!-- Title -->
-    <title>Templates (xsl) - Documentación de Teamsite</title>
+    <title>Templates (xsl) - Teamsite Docs</title>
   </head>
   <body>
-    <!-- HEADER -->
-    <header>
-      <nav class="navbar navbar-expand-lg p-3 mb-2 shadow-sm">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="../../">Documentación de Teamsite</a>
-        </div>
-      </nav>
-    </header>
-    <!-- HEADER FINISHES -->
+    <!-- HEADER INCLUDE -->
+    <div id="header"></div>
 
     <!-- MAIN CONTENT -->
     <main class="container">
-      <h1 class="main-title"><i class="fa-solid fa-cube"></i>Templates (xsl)</h1>
+      <h1 class="main-title">
+        <i class="fa-solid fa-cube"></i>Templates (xsl)
+      </h1>
 
       <!-- Ubicación -->
       <section class="main-section" id="ubicacion">
         <h2>Ubicación</h2>
         <p>Los templates se localizan en la siguiente ruta de CCPRO:</p>
-        <span
-          ><i id="templatesUrl"
-            >//iwserver/default/main/Errepar/WORKAREA/default/iwov-resources/xsl</i
-          ></span
+        <span class="copy-container" id="templatesUrl"
+          >//iwserver/default/main/Errepar/WORKAREA/default/iwov-resources/xsl</span
         >
         <button
           class="btn btn-sm btn-secondary copy-this"
@@ -56,7 +49,7 @@
         </button>
       </section>
 
-      <section class="main-section">
+      <section class="main-section" id="crear">
         <!-- Create a template -->
         <h2>Crear un template .xsl</h2>
 
@@ -96,31 +89,7 @@
                 >DCR importado en el componente.</a
               >
             </p>
-            <p>
-              Para conseguirlo, se utiliza el tag
-              <code>&lt;xsl:value-of ...</code> agregando el atributo
-              <code>select</code> con la ruta al DCR.
-            </p>
-            <p>Por ejemplo:</p>
-            <pre>
-  &lt;h2 class="title-1"&gt;
-    &lt;xsl:value-of select = "/Properties/Data/Datum/DCR/Content/CardTitle" /&gt;
-  &lt;/h2&gt;
-          </pre
-            >
-            <p>
-              De esta manera, el valor de <code>CardTitle</code> se insertará
-              dentro del tag <code>&lt;h2&gt;</code>
-            </p>
-            <p>
-              <strong
-                >Para más información sobre qué tags usar en cada caso acceder a
-                la
-                <a href="https://www.w3schools.com/xml/xsl_intro.asp"
-                  >Documentación de XSLT</a
-                ></strong
-              >
-            </p>
+            Las instrucciones de detallan en la seccion <a href="../ccpro/dcrs.html#templatexsl">Implementar el DCR en un template .xsl desde DCR en CCPRO</a>
           </li>
           <li>
             Importar el archivo a CCPro en su respectiva carpeta ver

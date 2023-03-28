@@ -22,18 +22,11 @@
     <link rel="stylesheet" href="../../css/style.min.css" />
 
     <!-- Title -->
-    <title>DCR E-Studio - Documentación de Teamsite</title>
+    <title>DCR E-Studio - Teamsite Docs</title>
   </head>
   <body>
-    <!-- HEADER -->
-    <header>
-      <nav class="navbar navbar-expand-lg p-3 mb-2 shadow-sm">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="../../">Documentación de Teamsite</a>
-        </div>
-      </nav>
-    </header>
-    <!-- HEADER FINISHES -->
+    <!-- HEADER INCLUDE -->
+    <div id="header"></div>
 
     <!-- MAIN CONTENT -->
     <main class="container">
@@ -73,8 +66,8 @@
               alt="Select Content Item"
             />
           </li>
-          <li>
-            Seleccionar la ubicación del nuevo DCR
+          <li id="category">
+            Seleccionar la ubicación del nuevo DCR (Este será el campo "Category" mencionado en <a href="../ccpro/dcrs.html#componente">DCRs en CCPro</a>)
             <ul>
               <li>
                 <strong>errepar-home</strong>: Para componentes dentro de la
@@ -100,15 +93,92 @@
             <img src="../../assets/images/crear-dcr-2.png" alt="" />
           </li>
           <li>
-            Aparecerá una ventana de edición del template como se ve en la
-            imagen. Dónde se pueden arrastrar campos del DCR al template.
+            Aparecerá una ventana de edición del DCR como se ve en la imagen.
+            Dónde se pueden arrastrar campos del DCR al template.
             <img
               src="../../assets/images/crear-dcr-3.png"
-              alt="Edición del template"
+              alt="Edición del DCR"
             />
+          </li>
+          <li>
+            Definir el name y location del formulario. Dejar los valores por
+            defecto (Recomendado). El valor de <b>name</b> y <b>location</b> serán usados para <a href="../ccpro/dcrs.html#templatexsl">acceder al DCR desde un template.xsl en CCPRO</a>
+            <img
+              src="../../assets/images/crear-dcr-4.png"
+              alt="Edición del DCR"
+            />
+          </li>
+          <li>
+            Definir el nombre del DCR y dejar el valor de Category por defecto
+            (Recomendado)
+            <img
+              src="../../assets/images/crear-dcr-5.png"
+              alt="Edición del DCR"
+            />
+          </li>
+          <li>
+            Arrastrar un elemento desde la lista de elmentos a la izquierda
+            hasta el "Canvas" en el centro. Definir el Label y Descripción. Para
+            "Name" y "PathId" usar el mismo valor en ambos. Tildar "Required" en
+            caso de ser un campo obligatorio. Definir un "Max Length" para el
+            número máximo de caracteres. Y tildar "Default" en caso de querer
+            utilizar un valor por defecto en el campo. Incluso se puede agregar
+            una expresión regular para validar el input del usuario.
+            <img
+              src="../../assets/images/crear-dcr-6.png"
+              alt="Edición del DCR"
+            />
+          </li>
+          <li>
+            En caso de que el/la autor/a necesite crear diversos elementos del
+            mismo tipo como pueden ser cards:
+            <img
+              src="../../assets/images/crear-dcr-7.png"
+              alt="Cards de artículos"
+            />
+            <p>
+              Utilizar un "container" que sirve para contener diversas
+              instancias de un input group
+            </p>
+            <img
+              src="../../assets/images/crear-dcr-8.png"
+              alt="Edición del DCR"
+            />
+            <p>Definir nombre, descripción, etc del container.</p>
+            <p>
+              Insertar dentro del container cada input que vaya a necesitar
+              el/la autor/a para crear cada artículo.
+            </p>
+            <p>
+              Luego el/la autor/a va a poder crear cuantas instancias necesite
+              de este container dentro de los límites indicados por los
+              atributos del componente
+            </p>
+            <img
+              src="../../assets/images/crear-dcr-9.png"
+              alt="Edición del DCR"
+            />
+          </li>
+          <li>
+            <p>
+              Una vez finalizado el DCR ir a "Next" y configurar todos los
+              usuarios o grupos que podrán acceder al DCR
+            </p>
+          </li>
+          <li>Guardar cambios</li>
+          <li>
+            Finalmente
+            <a href="../ccpro/dcrs.html#componente"
+              >Implementar el DCR en un Componente</a
+            >
+            e
+            <a href="../ccpro/dcrs.html#template"
+              >Implementar el DCR en un Template .xsl</a
+            >
           </li>
         </ol>
       </section>
+      <!-- FIN DE CREACIÓN DE DCR -->
     </main>
 
     <!-- Button to scroll to top -->

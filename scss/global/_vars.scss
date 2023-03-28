@@ -1,13 +1,19 @@
 // Colors
 $markColor: #ffea00;
 $darkGray: #232323;
-$codeBg: $darkGray;
+$blue: #0d6efd;
+$lightBlue: #72aaff;
+$darkBlue: #002e72;
 $blanco: #ffffff;
 $gris: #b3b3b3;
 $grisLight: #f0f0f0;
-$codeColor: #c1c1c1;
-$lightBlue: #dee2e6;
 $shadowColor: rgba($darkGray, 0.5);
+
+//Applied colors
+$primary: $blue;
+$accent: $darkBlue;
+$codeColor: #c1c1c1;
+$codeBg: $darkGray;
 $overlayColor: $shadowColor;
 
 // BREAKPOINTS for responsive development
