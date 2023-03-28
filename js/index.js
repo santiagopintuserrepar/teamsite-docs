@@ -7,7 +7,13 @@ const main = () => {
   copyTexts();
   goToTop();
   visualizeImg();
-  $("#header").load("../../partials/header.html");
+  let homeRoute = "../partials/header.html";
+  let pageRoute = "../../partials/header.html";
+  let route;
+  $("body").attr("data-url") === "/"
+    ? (route = homeRoute)
+    : (route = pageRoute);
+  $("#header").load(route);
 };
 
 $(() => {
