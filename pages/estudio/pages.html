@@ -44,6 +44,136 @@
       <section class="main-section" id="crear">
         <!-- CREAR UN COMPONENTE -->
         <h2>Crear una página</h2>
+        <ol>
+          <li>
+            Dirigirse a
+            <a
+              href="https://ui.public.awsalphadevqa.com/estudio/#/project/Errepar/sites/errepar/pages"
+              >E Studio/pages</a
+            >
+          </li>
+          <li>
+            En la pestaña "Pages" seleccionar la ruta donde guardar la nueva
+            página. En la mayoría de los casos la ruta
+            <b>debe ser "Home"</b> (Esto se ilustra en la imagen del siguiente
+            paso)
+          </li>
+          <li>
+            Luego clickear en <b>"+ New Page"</b>
+            <img
+              src="../../assets/images/crear-page-1.png"
+              alt="Crear una página"
+            />
+          </li>
+          <li>
+            <b>Seleccionar el template</b> del cual heredar todas las
+            propiedades, componentes, scripts, hojas de estilo, etc.
+            <img
+              src="../../assets/images/crear-page-2.png"
+              alt="Seleccionar template"
+            />
+          </li>
+          <li>Click en <b>"Next"</b></li>
+          <li>
+            <b>Definir nombre, descripción y permalink</b> de la página. El
+            nombre debe ser en
+            <a href="https://www.theserverside.com/definition/Kebab-case"
+              ><b>kebab-case</b></a
+            >. El permalink permite utilizar una URL friendly pero la página se
+            publica en dos URLs
+            <p>
+              Tildar la opción de "Enable Canonical URL". Esto permite que
+              Google no penalice el Sitio por tener la página repetida en dos
+              URLs
+            </p>
+            <p>Clickear <b>"Next"</b></p>
+            <img
+              src="../../assets/images/crear-page-3.png"
+              alt="Definir información de la página"
+            />
+          </li>
+          <li>
+            <p>En general la siguiente pantalla se deja en blanco</p>
+            <p>Click en <b>"Confirm"</b></p>
+            <img
+              src="../../assets/images/crear-page-4.png"
+              alt="Confirmar creación de la página"
+            />
+          </li>
+          <li>
+            Ahora queda <a href="#editarComponentes">editar los componentes</a>
+          </li>
+        </ol>
+      </section>
+      <section class="main-section" id="editarComponentes">
+        <h2>Editar componentes</h2>
+        <p>
+          Para poder editar un componente este tiene que tener un DCR, de otra
+          manera, el contenido del componente está fijo (hardcodeado) y no se
+          puede modificar desde la vista de edición de la página.
+        </p>
+        <ul>
+          <li>
+            Desde la vista de edición de la página clickear en el botón superior
+            derecho del componente
+            <img
+              src="../../assets/images/editar-page-1.png"
+              alt="Editar componente"
+            />
+          </li>
+          <li>
+            Esto abrirá la vista de edición del componente. En este caso el
+            componente Header está leyendo su información de un archivo llamado
+            "header.xml". Todas las páginas que utilizan el componente Header,
+            están usando este dcr llamado header.xml como fuente de información
+            con sus links, URLs etc.
+            <img
+              src="../../assets/images/editar-page-2.png"
+              alt="Editar componente"
+            />
+          </li>
+          <li>
+            Estas son las diferentes opciones que aparecen al editar el
+            componente:
+            <img
+              src="../../assets/images/editar-page-3.png"
+              alt="Opciones al editar el componente"
+            />
+            <ol>
+              <li>
+                <b>"Clear"</b> elimina el vínculo entre esta instancia del
+                componente al archivo .xml que contiene la data del componente.
+              </li>
+              <li>
+                <b>"Browse"</b> permite buscar archivos .xml dentro de la ruta
+                designada de donde nutrir el componente.
+              </li>
+              <li>
+                <b>"Search"</b> permite buscar entre todos los archivos .xml y
+                seleccionar uno específico para nutrir la instancia actual del
+                componente
+              </li>
+              <li>
+                Si vamos a "Edit" podemos modificar desde el DCR este archivo
+                .xsl de donde el header está tomando la información que
+                necesita. Esto afectará a todas las páginas que utilicen el
+                mismo archivo .xml
+              </li>
+              <li>
+                Si necesitamos que estos cambios surjan efecto únicamente en
+                esta página podemos ir a <b>"new"</b> para crear un nuevo
+                archivo .xml en blanco basado en el Content Template (DCR).
+                También podemos ir a <b>"Copy and Edit"</b> para duplicar el
+                archivo .xml con toda su data, para después guardarla en un
+                nuevo archivo y editarlo sin modificar ninguna otra página
+              </li>
+              <li>
+                Por último <b>"View"</b> permite ver el archivo .xml y toda su
+                información sin riesgo a editarlo accidentalmente.
+              </li>
+            </ol>
+          </li>
+        </ul>
       </section>
     </main>
 
