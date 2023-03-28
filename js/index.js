@@ -3,7 +3,7 @@ import { copyTexts, goToTop } from "./utils.js";
 import { visualizeImg } from "./handleImages.js";
 
 const main = () => {
-  console.log("Index Loaded");
+  console.log("Index Loaded 1.0");
   copyTexts();
   goToTop();
   visualizeImg();
