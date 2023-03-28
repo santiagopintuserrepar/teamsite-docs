@@ -1,0 +1,25 @@
+{
+  "name": "teamsite-docs-prod",
+  "version": "1.0.0",
+  "description": "A documentation for using Teamsite to create components, pages, templates, etc.",
+  "main": "js/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/santiagopintuserrepar/teamsite-docs.git"
+  },
+  "keywords": [
+    "Teamsite",
+    "Errepar",
+    "components",
+    "templates"
+  ],
+  "author": "Santiago Pintus",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/santiagopintuserrepar/teamsite-docs/issues"
+  },
+  "homepage": "https://santiagopintuserrepar.github.io/teamsite-docs/"
+}
